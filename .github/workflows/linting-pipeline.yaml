@@ -23,7 +23,7 @@ jobs:
     - name: Lint HTML files
       run: ./node_modules/.bin/htmlhint "src/**/*.html"
     - name: Lint HTML files
-      run: npx htmlhint "src**/*home.html"
+      run: "*/.html"
     - name: Lint CSS files
-      run: npx stylelint "styles**/*.css"
+      run: "*/.css"
 
