@@ -21,6 +21,8 @@ jobs:
     - name: Set execute permission for htmlhint
       run: chmod +x node_modules/.bin/htmlhint
     - name: Lint HTML files
+      run: ./node_modules/.bin/htmlhint "src/**/*.html"
+    - name: Lint HTML files
       run: npx htmlhint "src**/*home.html"
     - name: Lint CSS files
       run: npx stylelint "styles**/*.css"
