@@ -1,0 +1,14 @@
+body {
+    background-color: #f7f7f7;
+    color: #222;
+    font-family: 'Verdana', sans-serif;
+}
+
+header ul li a {
+    color: #0066cc;
+}
+
+main ul {
+    list-style: square;
+    padding: 20px;
+}
