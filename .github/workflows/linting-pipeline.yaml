@@ -23,6 +23,6 @@ jobs:
     - name: Test htmlhint version
       run: ./node_modules/.bin/htmlhint --version
     - name: Lint HTML files
-      run: ./node_modules/.bin/htmlhint "src/**/*.html"
+      run: "*/.html"
     - name: Lint CSS files
-      run: stylelint "styles/**/*.css"
+      run: "*/.css"
