@@ -18,9 +18,13 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: npm install
+    - name: Verify htmlhint installation
+      run: npm list htmlhint
+    - name: Check htmlhint executable
+      run: ls -l node_modules/.bin/htmlhint
     - name: Set execute permission for htmlhint
       run: chmod +x node_modules/.bin/htmlhint
     - name: Lint HTML files
-      run: htmlhint "src/**/*.html"
+      run: ./node_modules/.bin/htmlhint "src/**/*.html"
     - name: Lint CSS files
       run: stylelint "styles/**/*.css"
