@@ -18,16 +18,10 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: npm install
-    - name: Debug HTMLHint Binary
-      run: |
-        echo "Checking if htmlhint is installed..."
-        ls -l node_modules/.bin/htmlhint
-        echo "Checking Node.js version..."
-        node --version
-        echo "Checking npm version..."
-        npm --version
-    - name: Set execute permissions for all binaries
-      run: chmod -R +x node_modules/.bin
+    - name: Set execute permissions for htmlhint binary
+      run: chmod +x node_modules/.bin/htmlhint
+    - name: Test htmlhint version
+      run: ./node_modules/.bin/htmlhint --version
     - name: Lint HTML files
       run: ./node_modules/.bin/htmlhint "src/**/*.html"
     - name: Lint CSS files
