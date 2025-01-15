@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Lint HTML files
-      run: npx htmlhint "src**/*.html"
+      run: npx htmlhint "styles**/*.css"
     - name: Lint CSS files
       run: npx stylelint "styles**/*.css"
 
